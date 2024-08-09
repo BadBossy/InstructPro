@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/BadBossy/InstructPro/compare/v1.0.1...v1.0.2) (2024-08-09)
+
+
+### Bug Fixes
+
+* missing npm run ([0838f4f](https://github.com/BadBossy/InstructPro/commit/0838f4f561421dc72f0fb8231a695f2956e0048a))
+
 ## [1.0.1](https://github.com/BadBossy/InstructPro/compare/v1.0.0...v1.0.1) (2024-08-09)
 
 
