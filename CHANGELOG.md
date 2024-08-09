@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/BadBossy/InstructPro/compare/v1.0.0...v1.0.1) (2024-08-09)
+
+
+### Bug Fixes
+
+* node actions ([5002d6f](https://github.com/BadBossy/InstructPro/commit/5002d6fd8cb661e87d2d19eebc1385cc4823f6e1))
+
 # 1.0.0 (2024-08-09)
 
 
