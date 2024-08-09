@@ -6,9 +6,16 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "lint": "ng lint"
   },
   "private": true,
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged && npm run lint",
+      "pre-push": "npm run lint && npm run test"
+    }
+  },
   "dependencies": {
     "@angular/animations": "^18.1.0",
     "@angular/cdk": "^18.1.4",
@@ -29,6 +36,8 @@
     "@angular/cli": "^18.1.4",
     "@angular/compiler-cli": "^18.1.0",
     "@types/jasmine": "~5.1.0",
+    "angular-eslint": "18.2.0",
+    "eslint": "^9.8.0",
     "husky": "^9.1.4",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",
@@ -39,6 +48,7 @@
     "prettier": "^3.3.3",
     "pretty-quick": "^4.0.0",
     "semantic-release": "^24.0.0",
-    "typescript": "~5.5.2"
+    "typescript": "~5.5.2",
+    "typescript-eslint": "8.0.0"
   }
 }
