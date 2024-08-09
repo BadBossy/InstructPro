@@ -1,16 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
 
 @Component({
   selector: 'app-manual-renderer',
   templateUrl: './manual-renderer.component.html',
   styleUrls: ['./manual-renderer.component.scss'],
-  standalone: true
+  standalone: true,
 })
 export class ManualRendererComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

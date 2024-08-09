@@ -4,6 +4,6 @@ import { ManualRendererComponent } from './features/manual/manual-renderer/manua
 export const routes: Routes = [
   {
     path: 'manual',
-    component: ManualRendererComponent
-  }
+    component: ManualRendererComponent,
+  },
 ]

@@ -12,7 +12,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-.bar {
+  .bar {
     min-height: 25%;
     border-radius: 10px;
     width: calc(calc(1px * sqrt(2 * pow(80, 2))) * 4);
