@@ -2,13 +2,24 @@
   <div
     style="display: flex; background-color: #505964; height: 5%; color: white"
   >
-    <div style="width: 30%; display: flex; flex-direction: column; justify-content: center">
-      <div style="text-align: center;">{{progress}}% Completed</div>
+    <div
+      style="
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      "
+    >
+      <div style="text-align: center">{{ progress }}% Completed</div>
       <div style="display: flex; justify-content: space-around">
-        <mat-progress-bar style="width: 75%" mode="determinate" value="{{ progress }}"></mat-progress-bar>
+        <mat-progress-bar
+          style="width: 75%"
+          mode="determinate"
+          value="{{ progress }}"
+        ></mat-progress-bar>
       </div>
     </div>
-    <div style="width: 70%">{{data.topic}}</div>
+    <div style="width: 70%">{{ data.topic }}</div>
   </div>
   <div
     style="
@@ -19,41 +30,55 @@
       padding-left: 1rem;
     "
   >
-    <div style="
-      width: 30%;
-      display: flex; flex-direction: column; padding: 0.5rem; gap: 0.5rem
-      ">
+    <div
+      style="
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem;
+        gap: 0.5rem;
+      "
+    >
       @for (step of data.steps; track $index) {
         <mat-card (click)="onClick(step)">
           <mat-card-header>
-            <mat-card-title>{{step.title}}</mat-card-title>
+            <mat-card-title>{{ step.title }}</mat-card-title>
           </mat-card-header>
-          <mat-card-content>
-          </mat-card-content>
+          <mat-card-content> </mat-card-content>
         </mat-card>
       }
     </div>
     <mat-card style="width: 70%; height: 100%">
       @if (currentStep) {
-        <div style="display: flex; flex-direction: column; height: 100%; width: 100%">
-          <div style="height: 100%; width:100%">
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+          "
+        >
+          <div style="height: 100%; width: 100%">
             <div>
-              <b>
-              Step {{currentStep.stepNumber}} {{currentStep.title}}
-              </b>
+              <b> Step {{ currentStep.stepNumber }} {{ currentStep.title }} </b>
             </div>
             <div>
-              {{currentStep.content}}
+              {{ currentStep.content }}
             </div>
             <div>
-              {{currentStep.notes}}
+              {{ currentStep.notes }}
             </div>
           </div>
-          <div style="height: 20%; width: 100%;
-          display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: self-end;">
+          <div
+            style="
+              height: 20%;
+              width: 100%;
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: self-end;
+            "
+          >
             <button mat-raised-button>Previous</button>
             <button mat-raised-button>Next</button>
           </div>
