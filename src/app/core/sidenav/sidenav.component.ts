@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Guide } from '../../features/manual/manual-renderer/manual-renderer.component';
+import { Guide } from '../../models/guide.model';
 
 @Component({
   selector: 'app-sidenav',
@@ -8,5 +8,5 @@ import { Guide } from '../../features/manual/manual-renderer/manual-renderer.com
   standalone: true,
 })
 export class SidenavComponent {
-  @Input() data: Array<Guide> = [];
+  @Input() data: Guide[] = [];
 }
