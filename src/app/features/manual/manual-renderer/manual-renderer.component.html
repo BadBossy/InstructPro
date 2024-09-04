@@ -19,7 +19,22 @@
         ></mat-progress-bar>
       </div>
     </div>
-    <div style="width: 70%">{{ data.topic }}</div>
+    <div
+      style="
+        width: 70%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      "
+    >
+      <span>
+        {{ data.topic }}
+      </span>
+      <div style="border-left: 3px solid yellow; height: 50%"></div>
+      <span>{{ data.tags }}</span>
+      <div style="border-left: 3px solid yellow; height: 50%"></div>
+      <span>5 min</span>
+    </div>
   </div>
   <div
     style="

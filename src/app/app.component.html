@@ -1,4 +1,11 @@
-<app-header [title]="title"></app-header>
-<div style="height: 90vh">
-  <router-outlet />
-</div>
+<app-header [title]="title" (sideNavToggle)="sideNav = !sideNav"></app-header>
+<mat-drawer-container style="height: 95vh">
+  <mat-drawer mode="side" [opened]="sideNav">
+    <app-sidenav [data]="guides"></app-sidenav>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div style="height: 90vh">
+      <router-outlet />
+    </div>
+  </mat-drawer-content>
+</mat-drawer-container>
