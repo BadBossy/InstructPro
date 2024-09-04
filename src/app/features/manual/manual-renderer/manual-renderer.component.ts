@@ -1,38 +1,38 @@
-import { Component, OnInit } from '@angular/core'
-import { CommonModule } from '@angular/common'
-import { MatCardModule } from '@angular/material/card'
-import { MatButtonModule } from '@angular/material/button'
-import { MatProgressBarModule } from '@angular/material/progress-bar'
-import { ScrollingModule } from '@angular/cdk/scrolling'
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 export interface Guide {
-  _id: string
-  topic: string
-  description: string
-  createdAt: Date
-  updatedAt: Date
-  author: Author
-  steps: Step[]
-  tags: string[]
+  _id: string;
+  topic: string;
+  description: string;
+  createdAt: Date;
+  updatedAt: Date;
+  author: Author;
+  steps: Step[];
+  tags: string[];
 }
 
 export interface Author {
-  authorId: string
-  name: string
+  authorId: string;
+  name: string;
 }
 
 export interface Step {
-  stepNumber: number
-  title: string
-  content: string // Markdown or HTML
-  media: Media[]
-  notes?: string // Optional
+  stepNumber: number;
+  title: string;
+  content: string; // Markdown or HTML
+  media: Media[];
+  notes?: string; // Optional
 }
 
 export interface Media {
-  fileId: string
-  filename: string
-  fileUrl: string
+  fileId: string;
+  filename: string;
+  fileUrl: string;
 }
 
 @Component({
@@ -278,19 +278,19 @@ export class ManualRendererComponent implements OnInit {
       },
     ],
     tags: ['computers', 'hardware', 'build', 'PC'],
-  }
+  };
 
-  currentStep: Step | null = null
-  progress = 0
+  currentStep: Step | null = null;
+  progress = 0;
 
   constructor() {}
 
   ngOnInit() {}
 
   onClick(step: Step) {
-    this.currentStep = step
+    this.currentStep = step;
     this.progress = Math.floor(
       (this.currentStep.stepNumber / this.data.steps.length) * 100
-    )
+    );
   }
 }
