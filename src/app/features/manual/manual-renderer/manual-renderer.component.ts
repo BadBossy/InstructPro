@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common'
 import { MatCardModule } from '@angular/material/card'
 import { MatButtonModule } from '@angular/material/button'
 import { MatProgressBarModule } from '@angular/material/progress-bar'
+import { ScrollingModule } from '@angular/cdk/scrolling'
 
 export interface Guide {
   _id: string
@@ -39,7 +40,13 @@ export interface Media {
   templateUrl: './manual-renderer.component.html',
   styleUrls: ['./manual-renderer.component.scss'],
   standalone: true,
-  imports: [CommonModule, MatCardModule, MatButtonModule, MatProgressBarModule],
+  imports: [
+    CommonModule,
+    MatCardModule,
+    MatButtonModule,
+    MatProgressBarModule,
+    ScrollingModule,
+  ],
 })
 export class ManualRendererComponent implements OnInit {
   data: Guide = {
@@ -72,6 +79,102 @@ export class ManualRendererComponent implements OnInit {
         content: 'Preheat your oven to 350°F (180°C)...',
         media: [],
       },
+      {
+        stepNumber: 3,
+        title: 'Preheat the Oven',
+        content: 'Preheat your oven to 350°F (180°C)...',
+        media: [],
+      },
+      {
+        stepNumber: 4,
+        title: 'Preheat the Oven',
+        content: 'Preheat your oven to 350°F (180°C)...',
+        media: [],
+      },
+      {
+        stepNumber: 5,
+        title: 'Preheat the Oven',
+        content: 'Preheat your oven to 350°F (180°C)...',
+        media: [],
+      },
+      {
+        stepNumber: 6,
+        title: 'Preheat the Oven',
+        content: 'Preheat your oven to 350°F (180°C)...',
+        media: [],
+      },
+      {
+        stepNumber: 7,
+        title: 'Preheat the Oven',
+        content: 'Preheat your oven to 350°F (180°C)...',
+        media: [],
+      },
+      {
+        stepNumber: 8,
+        title: 'Preheat the Oven',
+        content: 'Preheat your oven to 350°F (180°C)...',
+        media: [],
+      },
+      {
+        stepNumber: 9,
+        title: 'Preheat the Oven',
+        content: 'Preheat your oven to 350°F (180°C)...',
+        media: [],
+      },
+      {
+        stepNumber: 10,
+        title: 'Preheat the Oven',
+        content: 'Preheat your oven to 350°F (180°C)...',
+        media: [],
+      },
+      {
+        stepNumber: 11,
+        title: 'Preheat the Oven',
+        content: 'Preheat your oven to 350°F (180°C)...',
+        media: [],
+      },
+      {
+        stepNumber: 12,
+        title: 'Preheat the Oven',
+        content: 'Preheat your oven to 350°F (180°C)...',
+        media: [],
+      },
+      {
+        stepNumber: 13,
+        title: 'Preheat the Oven',
+        content: 'Preheat your oven to 350°F (180°C)...',
+        media: [],
+      },
+      {
+        stepNumber: 14,
+        title: 'Preheat the Oven',
+        content: 'Preheat your oven to 350°F (180°C)...',
+        media: [],
+      },
+      {
+        stepNumber: 15,
+        title: 'Preheat the Oven',
+        content: 'Preheat your oven to 350°F (180°C)...',
+        media: [],
+      },
+      {
+        stepNumber: 16,
+        title: 'Preheat the Oven',
+        content: 'Preheat your oven to 350°F (180°C)...',
+        media: [],
+      },
+      {
+        stepNumber: 17,
+        title: 'Preheat the Oven',
+        content: 'Preheat your oven to 350°F (180°C)...',
+        media: [],
+      },
+      {
+        stepNumber: 18,
+        title: 'Preheat the Oven',
+        content: 'Preheat your oven to 350°F (180°C)...',
+        media: [],
+      },
     ],
     tags: ['baking', 'cake', 'dessert'],
   }
@@ -84,6 +187,8 @@ export class ManualRendererComponent implements OnInit {
 
   onClick(step: Step) {
     this.currentStep = step
-    this.progress = (this.currentStep.stepNumber / this.data.steps.length) * 100
+    this.progress = Math.floor(
+      (this.currentStep.stepNumber / this.data.steps.length) * 100
+    )
   }
 }
