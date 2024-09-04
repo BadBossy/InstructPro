@@ -31,3 +31,9 @@ export class AppComponent {
     },
   ];
 }
+
+//#4A4F55
+//#5E50A8
+//#009F5C
+//#ECA94E
+//#F7F7F7

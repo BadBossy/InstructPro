@@ -64,16 +64,19 @@ export class ManualRendererComponent implements OnInit {
       {
         stepNumber: 1,
         title: 'Gather All Necessary Components',
-        content: `Before you start building your computer, ensure you have all the necessary components:
-- **CPU (Processor)**
-- **Motherboard**
-- **RAM (Memory)**
-- **Storage (SSD/HDD)**
-- **Power Supply Unit (PSU)**
-- **Graphics Card (GPU)**
-- **Case**
-- **Cooling System (Air/Water)**
-- **Monitor, Keyboard, and Mouse**
+        content: `
+        <p>Before you start building your computer, ensure you have all the necessary components:</p>
+        <ul>
+          <li><strong>CPU (Processor)</strong></li>
+          <li><strong>Motherboard</strong></li>
+          <li><strong>RAM (Memory)</strong></li>
+          <li><strong>Storage (SSD/HDD)</strong></li>
+          <li><strong>Power Supply Unit (PSU)</strong></li>
+          <li><strong>Graphics Card (GPU)</strong></li>
+          <li><strong>Case</strong></li>
+          <li><strong>Cooling System (Air/Water)</strong></li>
+          <li><strong>Monitor, Keyboard, and Mouse</strong></li>
+        </ul>
       `,
         media: [
           {
@@ -88,9 +91,12 @@ export class ManualRendererComponent implements OnInit {
       {
         stepNumber: 2,
         title: 'Prepare Your Workspace',
-        content: `Set up a clean, well-lit workspace with plenty of room to spread out your components. 
-- Use an anti-static mat or wrist strap to prevent static damage to your components.
-- Have your tools ready, including a screwdriver and thermal paste (if needed).
+        content: `
+        <p>Set up a clean, well-lit workspace with plenty of room to spread out your components.</p>
+        <ul>
+          <li>Use an anti-static mat or wrist strap to prevent static damage to your components.</li>
+          <li>Have your tools ready, including a screwdriver and thermal paste (if needed).</li>
+        </ul>
       `,
         media: [
           {
@@ -105,10 +111,13 @@ export class ManualRendererComponent implements OnInit {
       {
         stepNumber: 3,
         title: 'Install the CPU',
-        content: `Carefully install the CPU into the motherboard:
-- Open the CPU socket on the motherboard.
-- Align the CPU with the socket (check the notches and arrow indicators).
-- Gently place the CPU into the socket and secure it with the retention arm.
+        content: `
+        <p>Carefully install the CPU into the motherboard:</p>
+        <ul>
+          <li>Open the CPU socket on the motherboard.</li>
+          <li>Align the CPU with the socket (check the notches and arrow indicators).</li>
+          <li>Gently place the CPU into the socket and secure it with the retention arm.</li>
+        </ul>
       `,
         media: [
           {
@@ -122,9 +131,12 @@ export class ManualRendererComponent implements OnInit {
       {
         stepNumber: 4,
         title: 'Install the CPU Cooler',
-        content: `Apply a small amount of thermal paste to the top of the CPU if the cooler does not come with pre-applied paste.
-- Attach the CPU cooler to the motherboard according to the manufacturer's instructions.
-- Connect the cooler's fan to the appropriate header on the motherboard.
+        content: `
+        <p>Apply a small amount of thermal paste to the top of the CPU if the cooler does not come with pre-applied paste.</p>
+        <ul>
+          <li>Attach the CPU cooler to the motherboard according to the manufacturer's instructions.</li>
+          <li>Connect the cooler's fan to the appropriate header on the motherboard.</li>
+        </ul>
       `,
         media: [
           {
@@ -139,10 +151,13 @@ export class ManualRendererComponent implements OnInit {
       {
         stepNumber: 5,
         title: 'Install the RAM',
-        content: `Insert the RAM sticks into the motherboard slots:
-- Open the RAM slot clips on the motherboard.
-- Align the notch on the RAM stick with the slot.
-- Press the RAM stick down firmly until the clips snap into place.
+        content: `
+        <p>Insert the RAM sticks into the motherboard slots:</p>
+        <ul>
+          <li>Open the RAM slot clips on the motherboard.</li>
+          <li>Align the notch on the RAM stick with the slot.</li>
+          <li>Press the RAM stick down firmly until the clips snap into place.</li>
+        </ul>
       `,
         media: [
           {
@@ -157,10 +172,13 @@ export class ManualRendererComponent implements OnInit {
       {
         stepNumber: 6,
         title: 'Install the Motherboard in the Case',
-        content: `Secure the motherboard inside the case:
-- Place the motherboard standoffs in the case.
-- Align the motherboard with the standoffs and I/O shield.
-- Screw the motherboard into place using the provided screws.
+        content: `
+        <p>Secure the motherboard inside the case:</p>
+        <ul>
+          <li>Place the motherboard standoffs in the case.</li>
+          <li>Align the motherboard with the standoffs and I/O shield.</li>
+          <li>Screw the motherboard into place using the provided screws.</li>
+        </ul>
       `,
         media: [
           {
@@ -174,10 +192,13 @@ export class ManualRendererComponent implements OnInit {
       {
         stepNumber: 7,
         title: 'Install the Power Supply',
-        content: `Mount the power supply unit (PSU) into the case:
-- Position the PSU in the designated area of the case (usually at the bottom).
-- Secure the PSU with screws provided by the case.
-- Connect the PSU cables to the motherboard, CPU, and other components.
+        content: `
+        <p>Mount the power supply unit (PSU) into the case:</p>
+        <ul>
+          <li>Position the PSU in the designated area of the case (usually at the bottom).</li>
+          <li>Secure the PSU with screws provided by the case.</li>
+          <li>Connect the PSU cables to the motherboard, CPU, and other components.</li>
+        </ul>
       `,
         media: [
           {
@@ -191,10 +212,13 @@ export class ManualRendererComponent implements OnInit {
       {
         stepNumber: 8,
         title: 'Install Storage (SSD/HDD)',
-        content: `Mount the SSD or HDD into the case:
-- Use the provided brackets or trays to secure the drive.
-- Connect the data cable (SATA) to the motherboard.
-- Connect the power cable to the drive from the PSU.
+        content: `
+        <p>Mount the SSD or HDD into the case:</p>
+        <ul>
+          <li>Use the provided brackets or trays to secure the drive.</li>
+          <li>Connect the data cable (SATA) to the motherboard.</li>
+          <li>Connect the power cable to the drive from the PSU.</li>
+        </ul>
       `,
         media: [
           {
@@ -209,10 +233,13 @@ export class ManualRendererComponent implements OnInit {
       {
         stepNumber: 9,
         title: 'Install the Graphics Card (GPU)',
-        content: `Insert the graphics card into the appropriate PCIe slot:
-- Remove the expansion slot covers at the back of the case.
-- Align the GPU with the PCIe slot and press down firmly until it clicks into place.
-- Secure the GPU with screws and connect the power cables from the PSU.
+        content: `
+        <p>Insert the graphics card into the appropriate PCIe slot:</p>
+        <ul>
+          <li>Remove the expansion slot covers at the back of the case.</li>
+          <li>Align the GPU with the PCIe slot and press down firmly until it clicks into place.</li>
+          <li>Secure the GPU with screws and connect the power cables from the PSU.</li>
+        </ul>
       `,
         media: [
           {
@@ -226,10 +253,13 @@ export class ManualRendererComponent implements OnInit {
       {
         stepNumber: 10,
         title: 'Connect All Cables',
-        content: `Connect all necessary cables from the PSU, case, and components:
-- Connect front panel connectors (power button, USB ports, etc.) to the motherboard.
-- Connect fans to the appropriate headers on the motherboard.
-- Ensure all power and data cables are securely connected.
+        content: `
+        <p>Connect all necessary cables from the PSU, case, and components:</p>
+        <ul>
+          <li>Connect front panel connectors (power button, USB ports, etc.) to the motherboard.</li>
+          <li>Connect fans to the appropriate headers on the motherboard.</li>
+          <li>Ensure all power and data cables are securely connected.</li>
+        </ul>
       `,
         media: [
           {
@@ -244,10 +274,13 @@ export class ManualRendererComponent implements OnInit {
       {
         stepNumber: 11,
         title: 'Power On and Test the System',
-        content: `Power on your computer to test the build:
-- Connect the power cable to the PSU and the wall outlet.
-- Turn on the power supply and press the power button on the case.
-- Verify that all fans are spinning, and check for any POST (Power-On Self-Test) errors on the monitor.
+        content: `
+        <p>Power on your computer to test the build:</p>
+        <ul>
+          <li>Connect the power cable to the PSU and the wall outlet.</li>
+          <li>Turn on the power supply and press the power button on the case.</li>
+          <li>Verify that all fans are spinning, and check for any POST (Power-On Self-Test) errors on the monitor.</li>
+        </ul>
       `,
         media: [
           {
@@ -262,9 +295,12 @@ export class ManualRendererComponent implements OnInit {
       {
         stepNumber: 12,
         title: 'Install an Operating System',
-        content: `Once the hardware is functioning properly, install an operating system:
-- Insert a bootable USB drive or CD/DVD with the operating system of your choice.
-- Follow the on-screen instructions to install the OS onto your primary storage drive.
+        content: `
+        <p>Once the hardware is functioning properly, install an operating system:</p>
+        <ul>
+          <li>Insert a bootable USB drive or CD/DVD with the operating system of your choice.</li>
+          <li>Follow the on-screen instructions to install the OS onto your primary storage drive.</li>
+        </ul>
       `,
         media: [
           {
