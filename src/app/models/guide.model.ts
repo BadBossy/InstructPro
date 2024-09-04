@@ -27,4 +27,3 @@ export interface Guide {
   steps: Step[];
   tags: string[];
 }
-

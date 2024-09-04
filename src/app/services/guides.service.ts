@@ -5,13 +5,12 @@ import { Guide } from '../models/guide.model'; // Assuming Guide model is define
 import { environment } from '../../environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class GuideService {
-
   private apiUrl = `${environment.apiBaseUrl}/guides`; // Base URL for the API
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   // Get all guides
   getGuides(): Observable<Guide[]> {
@@ -27,8 +26,8 @@ export class GuideService {
   createGuide(guide: Guide): Observable<Guide> {
     return this.http.post<Guide>(this.apiUrl, guide, {
       headers: new HttpHeaders({
-        'Content-Type': 'application/json'
-      })
+        'Content-Type': 'application/json',
+      }),
     });
   }
 
@@ -36,8 +35,8 @@ export class GuideService {
   updateGuide(id: string, guide: Guide): Observable<Guide> {
     return this.http.put<Guide>(`${this.apiUrl}/${id}`, guide, {
       headers: new HttpHeaders({
-        'Content-Type': 'application/json'
-      })
+        'Content-Type': 'application/json',
+      }),
     });
   }
 
@@ -56,7 +55,8 @@ export class GuideService {
 
   // Get media file by filename
   getMedia(filename: string): Observable<Blob> {
-    return this.http.get(`${this.apiUrl}/file/${filename}`, { responseType: 'blob' });
+    return this.http.get(`${this.apiUrl}/file/${filename}`, {
+      responseType: 'blob',
+    });
   }
 }
-
