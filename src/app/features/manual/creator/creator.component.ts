@@ -1,0 +1,12 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-creator',
+  templateUrl: './creator.component.html',
+  styleUrls: ['./creator.component.scss'],
+})
+export class ManualCreatorComponent implements OnInit {
+  constructor() {}
+
+  ngOnInit() {}
+}
