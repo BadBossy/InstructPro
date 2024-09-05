@@ -40,8 +40,15 @@ $InstructPro-theme: mat.define-theme(
 html,
 body {
   height: 100%;
+  width: 100%;
 }
 body {
   margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+.mat-mdc-progress-bar {
+  --mdc-linear-progress-active-indicator-color: #009f5c; //progress bar color
+  --mdc-linear-progress-track-color: #f7f7f7; // background color
+  border-radius: 5px;
 }

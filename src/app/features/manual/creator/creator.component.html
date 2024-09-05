@@ -1,0 +1,71 @@
+<div style="height: 100%; width: 100%">
+  <div
+    style="
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      gap: 1rem;
+      padding-left: 1rem;
+    "
+  >
+    <div
+      style="
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem;
+        gap: 0.5rem;
+      "
+    >
+      <button mat-button class="example-item">Add Step</button>
+      <cdk-virtual-scroll-viewport
+        appendOnly
+        itemSize="50"
+        class="example-viewport"
+      >
+        <mat-card *cdkVirtualFor="let step of steps" class="example-item">
+          <mat-card-header>
+            <mat-card-title>{{ step.title }}</mat-card-title>
+          </mat-card-header>
+          <mat-card-content> </mat-card-content>
+        </mat-card>
+      </cdk-virtual-scroll-viewport>
+    </div>
+    <mat-card style="width: 70%; height: 100%">
+      <div
+        style="display: flex; flex-direction: column; height: 100%; width: 100%"
+      >
+        <div
+          style="
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: center;
+          "
+        >
+          <quill-editor [(ngModel)]="data"></quill-editor>
+          <div>
+            {{ data }}
+          </div>
+        </div>
+        <div
+          style="
+            height: 20%;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: self-end;
+            gap: 0.5rem;
+            padding-bottom: 0.5rem;
+          "
+        >
+          <button mat-raised-button>Delete</button>
+          <button mat-raised-button color="primary">Save</button>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</div>

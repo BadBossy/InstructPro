@@ -1,0 +1,5 @@
+<div style="display: flex; flex-direction: column">
+  @for (guide of data; track $index) {
+    <button mat-button (click)="openGuide(guide._id)">{{ guide.topic }}</button>
+  }
+</div>
