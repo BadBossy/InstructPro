@@ -1,121 +1,125 @@
-<div style="height: 100%; width: 100%">
-  <div
-    style="display: flex; background-color: #4a4f55; height: 5%; color: white"
-  >
+@if (data) {
+  <div style="height: 100%; width: 100%">
     <div
-      style="
-        width: 30%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      "
+      style="display: flex; background-color: #4a4f55; height: 5%; color: white"
     >
-      <div style="text-align: center">{{ progress }}% Completed</div>
-      <div style="display: flex; justify-content: space-around">
-        <mat-progress-bar
-          style="width: 75%"
-          mode="determinate"
-          value="{{ progress }}"
-        ></mat-progress-bar>
+      <div
+        style="
+          width: 30%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        "
+      >
+        <div style="text-align: center">{{ progress }}% Completed</div>
+        <div style="display: flex; justify-content: space-around">
+          <mat-progress-bar
+            style="width: 75%"
+            mode="determinate"
+            value="{{ progress }}"
+          ></mat-progress-bar>
+        </div>
+      </div>
+      <div
+        style="
+          width: 70%;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+        "
+      >
+        <span>
+          {{ data.topic }}
+        </span>
+        <div style="border-left: 3px solid #009f5c; height: 50%"></div>
+        <span>{{ data.tags }}</span>
+        <div style="border-left: 3px solid #009f5c; height: 50%"></div>
+        <span>5 min</span>
       </div>
     </div>
     <div
       style="
-        width: 70%;
+        height: 100%;
         display: flex;
         justify-content: space-around;
-        align-items: center;
+        gap: 1rem;
+        padding-left: 1rem;
       "
     >
-      <span>
-        {{ data.topic }}
-      </span>
-      <div style="border-left: 3px solid #009f5c; height: 50%"></div>
-      <span>{{ data.tags }}</span>
-      <div style="border-left: 3px solid #009f5c; height: 50%"></div>
-      <span>5 min</span>
-    </div>
-  </div>
-  <div
-    style="
-      height: 100%;
-      display: flex;
-      justify-content: space-around;
-      gap: 1rem;
-      padding-left: 1rem;
-    "
-  >
-    <div
-      style="
-        width: 30%;
-        display: flex;
-        flex-direction: column;
-        padding: 0.5rem;
-        gap: 0.5rem;
-      "
-    >
-      <cdk-virtual-scroll-viewport
-        appendOnly
-        itemSize="50"
-        class="example-viewport"
+      <div
+        style="
+          width: 30%;
+          display: flex;
+          flex-direction: column;
+          padding: 0.5rem;
+          gap: 0.5rem;
+        "
       >
-        <mat-card
-          *cdkVirtualFor="let step of data.steps"
-          class="example-item"
-          (click)="onClick(step)"
+        <cdk-virtual-scroll-viewport
+          appendOnly
+          itemSize="50"
+          class="example-viewport"
         >
-          <mat-card-header>
-            <mat-card-title>{{ step.title }}</mat-card-title>
-          </mat-card-header>
-          <mat-card-content> </mat-card-content>
-        </mat-card>
-      </cdk-virtual-scroll-viewport>
-    </div>
-    <mat-card style="width: 70%; height: 100%">
-      @if (currentStep) {
-        <div
-          style="
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            width: 100%;
-          "
-        >
+          <mat-card
+            *cdkVirtualFor="let step of data.steps"
+            class="example-item"
+            (click)="onClick(step)"
+          >
+            <mat-card-header>
+              <mat-card-title>{{ step.title }}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content> </mat-card-content>
+          </mat-card>
+        </cdk-virtual-scroll-viewport>
+      </div>
+      <mat-card style="width: 70%; height: 100%">
+        @if (currentStep) {
           <div
             style="
-              height: 100%;
-              width: 100%;
               display: flex;
               flex-direction: column;
-              gap: 0.5rem;
-              align-items: center;
-            "
-          >
-            <div>
-              <b> Step {{ currentStep.stepNumber }} {{ currentStep.title }} </b>
-            </div>
-            <div style="width: 90%" [innerHTML]="currentStep.content"></div>
-            <div>
-              {{ currentStep.notes }}
-            </div>
-          </div>
-          <div
-            style="
-              height: 20%;
+              height: 100%;
               width: 100%;
-              display: flex;
-              flex-direction: row;
-              justify-content: center;
-              align-items: self-end;
-              gap: 0.5rem;
-              padding-bottom: 0.5rem;
             "
           >
-            <button mat-raised-button>Previous</button>
-            <button mat-raised-button color="primary">Next</button>
+            <div
+              style="
+                height: 100%;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                align-items: center;
+              "
+            >
+              <div>
+                <b>
+                  Step {{ currentStep.stepNumber }} {{ currentStep.title }}
+                </b>
+              </div>
+              <div style="width: 90%" [innerHTML]="currentStep.content"></div>
+              <div>
+                {{ currentStep.notes }}
+              </div>
+            </div>
+            <div
+              style="
+                height: 20%;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: self-end;
+                gap: 0.5rem;
+                padding-bottom: 0.5rem;
+              "
+            >
+              <button mat-raised-button>Previous</button>
+              <button mat-raised-button color="primary">Next</button>
+            </div>
           </div>
-        </div>
-      }
-    </mat-card>
+        }
+      </mat-card>
+    </div>
   </div>
-</div>
+}

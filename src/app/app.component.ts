@@ -21,6 +21,10 @@ export class AppComponent {
   constructor(private readonly guideService: GuideService) {
     this.guideService.getGuides().subscribe((s) => (this.guides = s));
   }
+
+  addGuide() {
+    //   this.guideService.createGuide().subscribe((s) => console.log(s));
+  }
 }
 
 //#4A4F55
